@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/TileMap001.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/Collectable.tscn" type="PackedScene" id=4]
+
+[node name="LevelRoot" type="Node"]
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 48.2599, 209.52 )
+
+[node name="Spawner" parent="." instance=ExtResource( 3 )]
+
+[node name="CollectableRoot" type="Node" parent="."]
+
+[node name="Collectable" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 48.2599, 144 )
+
+[node name="Collectable2" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 80, 144 )
+
+[node name="Collectable3" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 112, 144 )
+
+[node name="Collectable4" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 144, 144 )
+
+[node name="Collectable5" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 176, 144 )
+
+[node name="Collectable6" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 208, 144 )
+
+[node name="Collectable8" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 176, 272 )
+
+[node name="Collectable9" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 207.74, 272 )
+
+[node name="Collectable10" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 239.74, 272 )
+
+[node name="Collectable11" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 271.74, 272 )
+
+[node name="Collectable12" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 303.74, 272 )
+
+[node name="Collectable13" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 335.74, 272 )
+
+[node name="Collectable14" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 176, 272 )
+
+[node name="Collectable15" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 207.74, 272 )
+
+[node name="Collectable16" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 239.74, 272 )
+
+[node name="Collectable17" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 271.74, 272 )
+
+[node name="Collectable18" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 303.74, 272 )
+
+[node name="Collectable19" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 335.74, 272 )
+
+[node name="Collectable20" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 368, 272 )
+
+[node name="Collectable21" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 399.74, 272 )
+
+[node name="Collectable22" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 431.74, 272 )
+
+[node name="Collectable23" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 463.74, 272 )
+
+[node name="Collectable24" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 495.74, 272 )
+
+[node name="Collectable25" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 527.74, 272 )
+
+[node name="Collectable7" parent="CollectableRoot" instance=ExtResource( 4 )]
+position = Vector2( 240, 144 )
