@@ -10,7 +10,8 @@
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 48.2599, 209.52 )
+position = Vector2( 337.365, 655.059 )
+speed = null
 
 [node name="Spawner" parent="." instance=ExtResource( 3 )]
 
