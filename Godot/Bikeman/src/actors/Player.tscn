@@ -8,6 +8,7 @@ extents = Vector2( 14.2877, 14.705 )
 
 [node name="Player" type="Area2D"]
 script = ExtResource( 2 )
+speed = 6
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.5, 0.5 )

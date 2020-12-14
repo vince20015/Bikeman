@@ -14,7 +14,10 @@ var directions = {
 	"STOP": Vector2.ZERO,
 }
 
-var newdir = Vector2.LEFT
+enum {UP, RIGHT, DOWN, LEFT}
+
+var newDir = directions.LEFT
+var currentDir = directions.LEFT
 var dir = directions.LEFT
 var noCol = true
 
@@ -24,23 +27,46 @@ func _ready():
 	position += Vector2.ONE * tile_size/2
 	
 func _process(delta):
+	#User Input----------------------------------------
+	if Input.is_action_pressed("DOWN"):
+		newDir = directions.DOWN
+	
+	if Input.is_action_pressed("UP"):
+		newDir = directions.UP
+	
+	if Input.is_action_pressed("LEFT"):
+		newDir = directions.LEFT
+		
+	if Input.is_action_pressed("RIGHT"):
+		newDir = directions.RIGHT
+		
+#----------------------------------------------------------	
+
 	if tween.is_active():
 		return
-	if newdir != dir:
-		ray.cast_to = directions[newdir] * tile_size
+	if newDir == Vector2.ZERO:
+		ray.cast_to = currentDir * tile_size
 		ray.force_raycast_update()
 		if !ray.is_colliding():
-			dir = newdir
-			move_tween(dir)
+			move_tween(currentDir)
+	else:
+		ray.cast_to = newDir * tile_size
+		ray.force_raycast_update()
+		if !ray.is_colliding():
+			currentDir = newDir
+			move_tween(newDir)
 		else:
-			move_tween(dir)
+			ray.cast_to = currentDir * tile_size
+			ray.force_raycast_update()
+			if !ray.is_colliding():
+				move_tween(currentDir)
+		newDir = Vector2.ZERO
 	
-	if Input.is_action_pressed("DOWN"):
-		
-		
+
+
 func move_tween(dir):
 	tween.interpolate_property(self, "position",
-	position, position + directions[dir] * tile_size,
+	position, position + dir * tile_size,
 		1.0/speed, Tween.TRANS_LINEAR)
 	tween.start()
 
