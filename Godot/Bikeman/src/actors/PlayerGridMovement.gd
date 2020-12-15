@@ -20,9 +20,6 @@ var newDir = directions.STOP
 var currentDir = directions.STOP
 
 
-func _ready():
-	position = position.snapped(Vector2.ONE * tile_size)
-	position += Vector2.ONE * tile_size/2
 	
 func _process(delta):
 	#User Input----------------------------------------

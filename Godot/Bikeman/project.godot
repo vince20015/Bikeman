@@ -19,6 +19,10 @@ config/name="Bikeman"
 run/main_scene="res://src/scenes/LevelRoot.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalVars="*res://src/Global/GlobalVars.gd"
+
 [display]
 
 window/size/width=704
